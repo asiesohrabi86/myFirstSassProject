@@ -1,0 +1,19 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "compile:sass": "sass scss/main.scss dist/css/main.css --style=compressed",
+  "copy:html": "cpx \"index.html\" dist",
+  "copy:assets": "cpx \"{images,fonts}/**/*\" dist/assets",
+  "build": "npm run compile:sass && npm run copy:html && npm run copy:assets"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "sass": "^1.93.3"
+  }
+}

@@ -5,8 +5,9 @@
   "scripts": {
   "compile:sass": "sass scss/main.scss dist/css/main.css --style=compressed",
   "copy:html": "cpx \"index.html\" dist",
-  "copy:assets": "cpx \"{images,fonts}/**/*\" dist/assets",
-  "build": "npm run compile:sass && npm run copy:html && npm run copy:assets"
+  "copy:images": "cpx \"images/**/*.*\" \"dist/assets/images\"",
+  "copy:fonts": "cpx \"fonts/**/*.*\" \"dist/assets/fonts\"",
+  "build": "npm run compile:sass && npm run copy:html && npm run copy:images && npm run copy:fonts"
   },
   "keywords": [],
   "author": "",

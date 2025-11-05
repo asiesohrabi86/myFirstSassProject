@@ -3,12 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "compile:sass": "sass scss/main.scss dist/css/main.css --style=compressed",
-  "copy:html": "cpx \"index.html\" dist",
-  "copy:images": "cpx \"images/**/*.*\" \"dist/assets/images\"",
-  "copy:fonts": "cpx \"fonts/**/*.*\" \"dist/assets/fonts\"",
-  "build": "npm run compile:sass && npm run copy:html && npm run copy:images && npm run copy:fonts"
-  },
+  "build": "mkdir -p dist/css dist/assets/images dist/assets/fonts && sass scss/main.scss dist/css/main.css --style=compressed && cpx \"index.html\" dist && cpx \"images/**/*.*\" \"dist/assets/images\" && cpx \"fonts/**/*.*\" \"dist/assets/fonts\""
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
